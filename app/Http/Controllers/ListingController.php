@@ -15,7 +15,7 @@ class ListingController extends Controller
         return inertia(
             'Listing/Index',
             [
-                'Listings' => Listing::all()
+                'listings' => Listing::all()
             ]
         );
     }
