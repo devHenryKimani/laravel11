@@ -63,7 +63,7 @@ class ListingController extends Controller
         return inertia(
             'Listing/Show',
             [
-                'Listing' => $listing
+                'listing' => $listing
             ]
         );
     }
