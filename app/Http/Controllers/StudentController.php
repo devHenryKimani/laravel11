@@ -33,7 +33,21 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Student::create (
+
+            $request->validate([
+                'name' =>'required|string',
+                'email' =>'required|email|unique:students,email',
+                'city' =>'required',
+                'phone_number' =>'required|integer',
+                'reg_number' =>'required|integer',
+                'city' =>'required',
+                'bio' =>'required|string',
+                
+            ])
+        );
+
+        return redirect()->route('student.index');
     }
 
     /**
