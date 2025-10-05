@@ -63,8 +63,8 @@ const form = useForm({
     name: null,
      email: null,
      city:null,
-     phone_number: 0,
-     reg_number:0,
+     phone_number: '',
+     reg_number:'',
      bio: null,
 })
 const create = () => form.post('/student')
