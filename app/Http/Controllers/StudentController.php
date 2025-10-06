@@ -33,9 +33,7 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        Student::create (
-
-            $request->validate([
+         $request->validate([
                 'name' =>'required|string',
                 'email' =>'required|email|unique:students,email',
                 'city' =>'required',
@@ -44,8 +42,16 @@ class StudentController extends Controller
                 'city' =>'required',
                 'bio' =>'required|string',
                 
-            ])
-        );
+         ]);
+
+        Student::create ([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'city' => $request->input('city'),
+            'phone_number' => $request->input('phone_number'),
+            'reg_number' => $request->input('reg_number'),
+            'bio' => $request->input('bio'),
+         ]);
 
         return redirect()->route('student.index');
     }
@@ -53,9 +59,16 @@ class StudentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Student $student)
     {
-        //
+        return inertia(
+            
+            'Student/Show',
+               [
+                'student' => $student
+               ]
+    
+    );
     }
 
     /**
