@@ -13,6 +13,14 @@
             <th class="py-3 px-4 text-left">Phone_number</th>
             <th class="py-3 px-4 text-left">Reg_number</th>
             <th class="py-3 px-4 text-left">Bio</th>
+             <th class="py-3 px-4 text-right">
+      <Link
+        href="/student/create"
+        class=" text-black px-2 py-2 rounded hover:bg-green-700 transition"
+      >
+        + Student
+      </Link>
+      </th>
         </tr>
     </thead>
     <tbody class="text-gray-700">
