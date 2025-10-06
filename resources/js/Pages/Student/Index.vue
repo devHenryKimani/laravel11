@@ -10,8 +10,8 @@
             <th class="py-3 px-4 text-left">Name</th>
             <th class="py-3 px-4 text-left">Email</th>
             <th class="py-3 px-4 text-left">City</th>
-            <th class="py-3 px-4 text-left">Phone_number</th>
-            <th class="py-3 px-4 text-left">Reg_number</th>
+            <th class="py-3 px-4 text-left">Phone number</th>
+            <th class="py-3 px-4 text-left">Reg number</th>
             <th class="py-3 px-4 text-left">Bio</th>
              <th class="py-3 px-4 text-right">
       <Link
