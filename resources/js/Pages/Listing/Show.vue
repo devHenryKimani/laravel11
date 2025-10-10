@@ -57,5 +57,7 @@ const duration = ref(25)
  const props = defineProps({
     listing:Object,
 })
-const { monthlyPayment } =useMonthlyPayment(props.listing.price, intrestRate, duration)
+const { monthlyPayment } = useMonthlyPayment(
+  props.listing.price, intrestRate, duration,
+)
 </script>
