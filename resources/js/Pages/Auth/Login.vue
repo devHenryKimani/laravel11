@@ -30,5 +30,5 @@ import { route } from 'ziggy-js';
     password: null,
  })
 
- const login = () => form.post(route(login.store))
+ const login = () => form.post(route('login.store'))
 </script>
