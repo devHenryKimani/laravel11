@@ -8,9 +8,13 @@
         <div class="text-xl text-indigo-600 dark:text-indigo-300 font-bold text-center">
           <Link :href="route('listing.index')">LaraZillow</Link>
         </div>
-        <div>
+        <div v-if="user" class="flex items-center gap-4">
+          <div class="text-sm text-gray-500">{{ user.name }}</div>
           <Link :href="route('listing.create')" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium p-2 rounded-md">+ New Listing</Link>
-
+          <div>Logout</div>
+        </div>
+        <div v-else>
+          <Link :href="route('login')">Sign-In</Link>
         </div>
       </nav>
     </div>
@@ -33,6 +37,10 @@ import { computed } from 'vue';
 const page = usePage()
 const flashSuccess = computed(
   () => page.props.flash.success,
+)
+
+const user = computed(
+  () => page.props.user,
 )
 </script>
 
