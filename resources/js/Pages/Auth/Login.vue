@@ -1,8 +1,8 @@
 <template>
 <form @submit.prevent="login">
     <div class="w-1/2 mx-auto">
-        <div>
-            <label for="email" class="label">E-mail </label>
+        <div >
+            <label for="email" class="primary-seanse">E-mail </label>
             <input id="email" type="text" class="input" v-model="form.email"/>
             <div v-if="form.errors.email"  class="input-error">{{ form.errors.email }}</div>
         </div>
